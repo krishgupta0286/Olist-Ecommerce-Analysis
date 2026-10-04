@@ -34,6 +34,7 @@ SELECT
     SUM(CASE WHEN order_estimated_delivery_date IS NULL THEN 1 ELSE 0 END) AS estimated_date_nulls
 FROM olist_orders_dataset;
 
+--How many orders are there for each order status?
 
 select order_status, count(order_status) as Total_orders from olist_orders_dataset group by order_status
 
